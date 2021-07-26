@@ -26,6 +26,8 @@ incorrect5 = [[1, 1.5],
 def check_sudoku(list):
     if list:
         return True
+    else:
+        return False
 
 
 # print(check_sudoku(incorrect))
