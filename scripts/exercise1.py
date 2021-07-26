@@ -1,6 +1,6 @@
 def prod(a, b):
     # TODO change output to the product of a and b
-    output = 0
+    output = a * b
     return output
 
 
