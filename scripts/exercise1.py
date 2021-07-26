@@ -12,6 +12,8 @@ def fact_gen():
         yield output
         # TODO: update i and n
         # Hint: i is a successive integer and n is the previous product
+        i += 1
+        n = output
 
 
 # Test block

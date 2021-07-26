@@ -22,3 +22,12 @@ def test_fact_gen_returns_2factorial():
     for i in range(num):
         result = next(my_gen)
     assert result == 2
+
+
+def test_fact_gen_returns_5factorial():
+    my_gen = fact_gen()
+    num = 5
+    result = 0
+    for i in range(num):
+        result = next(my_gen)
+    assert result == 120
