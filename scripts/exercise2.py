@@ -27,7 +27,8 @@ def check_sudoku(matrix):
     for list in matrix:
         for elem in list:
             if all(isinstance(elem, int) for elem in list):
-                return True
+                if elem <= len(list):
+                    return True
             else:
                 return False
 
