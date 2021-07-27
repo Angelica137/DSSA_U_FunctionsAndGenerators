@@ -23,9 +23,13 @@ incorrect5 = [[1, 1.5],
 # Define a function check_sudoku() here:
 
 
-def check_sudoku(list):
-    if list:
-        return True
+def check_sudoku(matrix):
+    for list in matrix:
+        for elem in list:
+            print(elem)
+            if all(isinstance(elem, int) for elem in list):
+                print("True")
+                return True
     else:
         return False
 
@@ -33,7 +37,7 @@ def check_sudoku(list):
 # print(check_sudoku(incorrect))
 # >>> False
 
-# print(check_sudoku(correct))
+print(check_sudoku(correct))
 # >>> True
 
 # print(check_sudoku(incorrect2))
