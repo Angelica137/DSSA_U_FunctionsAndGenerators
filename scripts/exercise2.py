@@ -24,25 +24,27 @@ incorrect5 = [[1, 1.5],
 
 
 def check_sudoku(matrix):
+    result = False
     for list in matrix:
         for elem in list:
             if all(isinstance(elem, int) for elem in list):
-                if elem <= len(list):
-                    return True
-            else:
-                return False
+                if all(elem <= len(list) for elem in list):
+                    result = True
+                else:
+                    result = False
+    return result
 
 
 # print(check_sudoku(incorrect))
 # >>> False
 
-print(check_sudoku(correct))
+# print(check_sudoku(correct))
 # >>> True
 
 # print(check_sudoku(incorrect2))
 # >>> False
 
-# print(check_sudoku(incorrect3))
+print(check_sudoku(incorrect3))
 # >>> False
 
 # print(check_sudoku(incorrect4))

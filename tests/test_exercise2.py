@@ -6,7 +6,7 @@ def test_check_sudoku_returns_true_if_list_has_int_only():
 
 
 def test_check_sudoku_returns_false_if_list_has_non_int():
-    assert check_sudoku([['a', 'b', 'c'],
+    assert check_sudoku([[1, 'b', 1],
                          ['b', 'c', 'a'],
                          ['c', 'a', 'b']]) == False
 
