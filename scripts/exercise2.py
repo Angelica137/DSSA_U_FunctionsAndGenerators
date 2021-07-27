@@ -28,8 +28,8 @@ def check_sudoku(matrix):
         for elem in list:
             if all(isinstance(elem, int) for elem in list):
                 return True
-    else:
-        return False
+            else:
+                return False
 
 
 # print(check_sudoku(incorrect))
