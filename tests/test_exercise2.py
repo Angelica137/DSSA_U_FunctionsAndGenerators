@@ -21,3 +21,7 @@ def test_sudoku_returns_false_if_elem_greater_len_list():
                          [4, 5, 2, 1, 3],
                          [3, 4, 5, 2, 1],
                          [5, 6, 4, 3, 2]]) == False
+
+
+def test_sudoku_returns_true_if_indeces_unique():
+    assert check_sudoku([[1, 2, 3], [1, 3, 1], [3, 1, 2]]) == False

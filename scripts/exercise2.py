@@ -25,6 +25,11 @@ incorrect5 = [[1, 1.5],
 
 def check_sudoku(matrix):
     result = False
+    for i in range(len(matrix) - 1):
+        for j in range(len(matrix)):
+            if matrix[i][j] == matrix[i + 1][j]:
+                return False
+        i += 1
     for list in matrix:
         for elem in list:
             if all(isinstance(elem, int) for elem in list):
